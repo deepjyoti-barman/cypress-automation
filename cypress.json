@@ -1,0 +1,11 @@
+{
+	"baseUrl": "http://localhost:4200",
+	"ignoreTestFiles": [
+		"**/01-getting-started/*",
+		"**/02-advanced-examples/*"
+	],
+	"viewportHeight": 1080,
+	"viewportWidth": 1920,
+	"watchForFileChanges": false,
+	"defaultCommandTimeout": 5000
+}

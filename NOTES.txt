@@ -1,0 +1,28 @@
+# GitHub clone link for Angular application (used during UI automation):
+------------------------------------------------------------------------
+https://github.com/Postavshik/ngx-cypress-test
+
+
+# Understanding the Folder/Framework Structure:
+-----------------------------------------------
+support:
+	> index.js -> First file cypress looks into before execution of the tests. Any code that we put here will be executed at the very first moment (i.e. any imports, adding any additional libraries, change default cypress behaviour or add hooks which needs to run for every single tests).
+
+	> commands.js -> This is the file where you can put your commonly used functions, functions which you may need to call in different tests (i.e. login function). You can also overwrite any existing cypress function here.
+
+plugins:
+	> index.js -> If you want to extend cypress's functionality, you can put here the custom plugins code here. It can have listeners, customized methods to handle the Cypress events.
+
+integration:
+	> This is the primary folder where you can put all your tests. Cypress runner will look into this folder and fine your test files.
+
+fixtures:
+	> Here we will put all out test data objects, mock objects and any other data (i.e. download data, upload data) that we need for our tests. In most of the cases it will be a json file with different test data.
+
+cypress.json
+	> The first time you open Cypress Test Runner, it creates the cypress.json configuration file at the root folder of our project. This JSON file is used to store any configuration values you supply. This configuration file can be used to change different default settings for the Cypress. To know about the default cypress settings and configuration options pay a visit to: 
+		https://docs.cypress.io/guides/references/configuration
+
+
+
+	

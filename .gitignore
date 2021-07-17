@@ -1,0 +1,23 @@
+# IDE - VSCode
+*.code-workspace
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Other IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# JavaScript dependencies for development and execution
+node_modules
+
+# System Files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,15 @@
+{
+  "name": "cypress-automation",
+  "version": "1.0.0",
+  "description": "A practice test automation suite with Cypress",
+  "main": "index.js",
+  "scripts": {
+    "cy:o": "cypress open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Deepjyoti Barman",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^7.7.0"
+  }
+}

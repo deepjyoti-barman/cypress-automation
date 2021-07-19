@@ -23,10 +23,10 @@ describe('Test suite to automate PUT API calls', () => {
                 body: payload
             }).then((response) => {
                 // Un-commenting cy.log() calls will make the script go fail
-                // This is because cy.log() call will change Cypress's default Asynchronous behaviour into Synchronous
+                // This is because cy.log() is a Synchronous call and we can't use this call inside an Asynchronous call
+                // We can use cy.log() before cy.request() call and it will work fine
                 // cy.log(response);
                 // cy.log("User ID: " + response.body.data.id);
-
                 expect(response.status).to.equal(201);
                 expect(response.body.data).has.property('name', payload.name);
                 expect(response.body.data).has.property('email', payload.email);
@@ -36,6 +36,8 @@ describe('Test suite to automate PUT API calls', () => {
                 const userId = response.body.data.id;
                 return userId;
             }).then((id) => {
+                cy.log(`User with id ${id} has been created`);
+
                 cy.request({
                     method: 'PUT',
                     url: baseUrl + '/users/' + id,
@@ -53,6 +55,7 @@ describe('Test suite to automate PUT API calls', () => {
                 }).then((response) => {
                     cy.log(response);
 
+                    expect(response.status).to.equal(200);
                     expect(response.body.data).has.property('name', 'Cypress Automation Updated');
                     expect(response.body.data).has.property('email', payload.email);
                     expect(response.body.data).has.property('gender', payload.gender);
@@ -68,7 +71,8 @@ describe('Test suite to automate PUT API calls', () => {
                         }
                     }).then((response) => {
                         cy.log(response);
-    
+
+                        expect(response.status).to.equal(200);
                         expect(response.body.data).has.property('name', 'Cypress Automation Updated');
                         expect(response.body.data).has.property('email', payload.email);
                         expect(response.body.data).has.property('gender', payload.gender);

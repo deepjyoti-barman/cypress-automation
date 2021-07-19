@@ -55,6 +55,7 @@ describe('Test suite to demonstrate API chaining in Cypress', () => {
                 }
             }).then((response) => {
                 cy.log(response);
+                
                 expect(response.status).to.equal(200);
                 expect(response.body).to.deep.equal({
                     "meta": null,

@@ -5,11 +5,14 @@
   "main": "index.js",
   "scripts": {
     "cy:o": "cypress open",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cy:r": "cypress run --headed --browser chrome --spec"
   },
   "author": "Deepjyoti Barman",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^7.7.0"
+    "cypress": "^8.0.0"
+  },
+  "devDependencies": {
+    "cypress-xpath": "^1.6.2"
   }
 }

@@ -23,3 +23,11 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+// Custom commands for the application
+// commands.js is the place where we can put our reusable functions, functions which can used across all our tests
+// For example: function to login / logout / creating DB connections
+// For more details pay a visit to: https://docs.cypress.io/api/cypress-api/custom-commands
+Cypress.Commands.add('openApp', () => {
+    cy.visit('/');
+});

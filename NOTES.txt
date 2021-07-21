@@ -25,4 +25,58 @@ cypress.json
 
 
 
-	
+# Understanding CSS Selectors:
+-------------------------------
+1. The universal CSS selector
+-> *
+
+2. The type/tagname CSS selector
+-> input
+
+3. The class CSS selector
+-> .input
+
+4. The id CSS selector
+-> #username
+
+5. The attribute CSS selector
+-> [attr]
+-> [attr=value]
+-> [attr~=value]
+-> [attr|=value]
+-> [attr^=value]
+-> [attr$=value]
+-> [attr*=value]
+
+6. The grouping CSS selector
+-> div, span
+
+7.. The direct child CSS selector
+-> div > p
+
+8. The direct or sub child / descendant CSS selector
+-> div p
+
+9. The general sibling CSS selector
+-> p ~ span [Description: The general sibling selector ~ selects all elements that are next siblings of a specified element. This will match all <span> elements that follow a <p>, immediately or not]
+
+10. The adjacent sibling CSS selector
+-> div + p [Description: The + selector is used to select an element that is directly after another specific element. The following example selects the first p element that are placed immediately after div elements.]
+
+11. The column CSS selector
+-> col || td [Description: This will match all <td> elements that belong to the scope of the <col>]
+
+12. Pseudo classes
+	a. Get the elements which has been visited
+	-> a:visited
+
+	b. Get the element by partial inner text
+	-> span:contains("Forms")
+
+13. Pseudo elements
+	a. Get the first line for a given element
+	-> p::first-line
+
+	b. Get the specific element
+	-> li::nth-of-type(4)
+	-> li::nth-child(4)

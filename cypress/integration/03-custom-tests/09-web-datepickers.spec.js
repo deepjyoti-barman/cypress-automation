@@ -35,6 +35,7 @@ describe('Suite containing tests to demonstrate how to handle web date-pickers i
             let dateAssert = selectDateFromCal(46);
 
             cy.wrap(input).invoke('prop', 'value').should('contain', dateAssert);
+            cy.wrap(input).should('have.value', dateAssert);        // The above validation can be implemented this way as well
         });
     });
 });

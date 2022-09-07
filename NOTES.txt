@@ -1,6 +1,7 @@
-# GitHub clone link for Angular application (used during UI automation):
-------------------------------------------------------------------------
-https://github.com/Postavshik/ngx-cypress-test
+# GitHub clone link for Angular applications used for automation:
+-----------------------------------------------------------------
+UI Automation Practice Project: https://github.com/Postavshik/ngx-cypress-test
+API Automation Practice Project: https://github.com/gothinkster/angular-realworld-example-app
 
 
 # Understanding the Folder/Framework Structure:
@@ -80,3 +81,12 @@ cypress.json
 	b. Get the specific element
 	-> li::nth-of-type(4)
 	-> li::nth-child(4)
+
+
+# API Testing with Cypress:
+---------------------------
+1. API stands for 'Application Programming Interface'
+2. Types of requests: GET, POST, PUT, PATCH, DELETE etc
+3. Typical request has: URL, Headers, Request Type and Request Body
+4. Cypress has built in server which can intercept browser API requests and provide mock response
+5. Cypress can make API requests and process responses
